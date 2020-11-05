@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package layerdatos;
+package data;
 
 /**
  *
  * @author nesas-15
  */
-public class XmlDAOFactory extends  DAOFactory{
+public class JsonDAOFactory extends  DAOFactory {
     
-     public UserDAO userDAO = new XmlUserDAO();
-     public VehicleDAO vehicleDAO = new XmlVehicleDAO();
+     public UserDAO userDAO = new JsonUserDAO();
+     public VehicleDAO vehicleDAO = new JsonVehicleDAO();
     
     
    @Override

@@ -3,17 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package layerdatos;
+package data;
 
 /**
  *
  * @author nesas-15
  */
-public class JsonUserDAO implements UserDAO  {
+public interface UserDAO {
     
-    
-    public void CrearU(String nom,String ced, String des) {
-        System.out.println("JsonUserDAO.CrearU: " + nom + ", "+ced+"," + des);
-    }
+    public void CrearU (String nom, String ced, String des);
     
 }

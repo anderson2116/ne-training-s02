@@ -3,18 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package layerdatos;
+package data;
 
 /**
  *
  * @author nesas-15
  */
-public class JsonVehicleDAO implements VehicleDAO {
+public interface VehicleDAO {
     
+    public void CrearV (String pla, String mar, String desv);
    
-    public void CrearV(String pla,String mar, String desv) {
-        System.out.println("JsonVehicleDAO.CrearV: " + pla + ", " +mar+ ","+ desv);
-    }
-    
     
 }

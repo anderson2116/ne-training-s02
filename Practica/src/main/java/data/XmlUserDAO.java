@@ -3,29 +3,34 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package layerdatos;
+package data;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.File;
 
 /**
  *
  * @author nesas-15
  */
-public class XmlVehicleDAO implements VehicleDAO{
- 
-     @Override
-    public void CrearV(String pla, String mar, String desv) {
-        System.out.println("XmlUserDAO.CrearU: "+pla+","+mar+" ,"+desv);
+public class XmlUserDAO implements UserDAO  {
+    
+    @Override
+    public void CrearU(String nom, String ced, String des) {
+        System.out.println("XmlUserDAO.CrearU: "+nom+","+ced+" ,"+des);
         try {
-            FileWriter myWriter = new FileWriter("/tmp/lab/"+pla+".txt");
-            myWriter.write(mar);
-            myWriter.write(desv);
+            
+           File fileToCreate = new File("/tmp/database/xml");
+           fileToCreate.mkdir();
+            FileWriter myWriter = new FileWriter("/tmp/database/xml/"+ced+".txt");
+            myWriter.write(nom + "/n" );
+            myWriter.write(des);
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
-    }   
+    }
+    
 }
